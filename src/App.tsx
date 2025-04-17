@@ -3,6 +3,8 @@ import { Person} from './components/Person';
 import { PersonList } from './components/PersonList';
 import './App.css';
 import { Status } from './components/Status';
+import { Heading } from './components/Heading';
+import { Oscar } from './components/Oscar';
 
 function App() {
   const personName = {
@@ -32,6 +34,11 @@ function App() {
       <Status status='loading' />
       <Status status='success' />
       <Status status='error' />
+      <Heading>Placeholder Text</Heading>
+      <Oscar>
+        <Heading>Oscar goes to Birat Roka</Heading>
+      </Oscar>
+      
     </div>
   );
 }
