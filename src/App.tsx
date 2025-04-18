@@ -54,7 +54,7 @@
 import './App.css'
 import { Button } from './components/Button'
 import { Input } from './components/Input'
-
+import { Container } from './components/Container'
 function App () {
   return <div className="App">
     <Button handleClick={(event,id) =>{
@@ -63,6 +63,7 @@ function App () {
     <Input value={'Birat'} handleChange={(event) =>{
       console.log('Input Changed', event)
     }}/>
+    <Container styles={{border:'1px solid red',padding:'10px'}}/>
     </div>
 }
 export default App
