@@ -9,7 +9,7 @@ export const Hello = (props: HelloProps) => {
         <div>
             <h1>
                 {props.isLoggedIn
-                    ? `Hello {props.name}!. You have {props.messageCount} unread messages in your inbox.`
+                    ? `Hello ${props.name}!. You have ${props.messageCount} unread messages in your inbox.`
                     : `Welcome There`
                 }
             
