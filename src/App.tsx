@@ -56,6 +56,8 @@ import { Button } from './components/Button'
 import { Input } from './components/Input'
 import { Container } from './components/Container'
 import Counter from './components/state/Counter'
+import { ThemeContextProvider } from './components/context/ThemeContext'
+import { Box } from './components/context/Box'
 function App () {
   return <div className="App">
     <Button handleClick={(event,id) =>{
@@ -71,6 +73,9 @@ function App () {
         <h2>Counter with useReducer</h2>
         <Counter />
       </div>
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
   </div>
   
 }
