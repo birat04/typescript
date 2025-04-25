@@ -1,10 +1,16 @@
-import React from 'react';
+import {useRef, useEffect} from 'react';
 
-export const DomRef: React.FC = () => {
-    const ref = React.useRef<HTMLDivElement>(null);
+export const DomRef = () => {
+    const inputRef = useRef<HTMLInputElement>(null!)
+
+    useEffect(() => {
+        
+        inputRef.current?.focus();
+        
+    }, [])
     return (
-        <div ref={ref}>
-            <button onClick={() => ref.current?.scrollIntoView()}>Scroll to top</button>
+        <div>
+            <input type='text' ref={inputRef} />
         </div>
-    );
-};
+    )
+}
