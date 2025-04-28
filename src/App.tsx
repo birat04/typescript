@@ -81,6 +81,7 @@ function App () {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+      <Counter />
   </div>
   
 }
