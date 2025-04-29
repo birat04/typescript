@@ -60,30 +60,34 @@ import { ThemeContextProvider } from './components/context/ThemeContext'
 import { Box } from './components/context/Box'
 import { UserContextProvider } from './components/context/UserContext'
 import { User} from './components/context/User'
+import { Private } from './components/auth/Private'
+import { Profile } from './components/auth/Profile'
 function App () {
-  return <div className="App">
-    <Button handleClick={(event,id) =>{
-      console.log('Button Clicked', event,id)
-    }}/>
-    <Input value={'Birat'} handleChange={(event) =>{
-      console.log('Input Changed', event)
-    }}/>
-    <Container styles={{border:'1px solid red',padding:'10px'}}/>
-   
+    return <div className="App">
+      <Button handleClick={(event,id) =>{
+          console.log('Button Clicked', event,id)
+        }}/>
+        <Input value={'Birat'} handleChange={(event) =>{
+            console.log('Input Changed', event)
+          }}/>
+          <Container styles={{border:'1px solid red',padding:'10px'}}/>
       
-      <div style={{marginTop: '20px'}}>
-        <h2>Counter with useReducer</h2>
-        <Counter />
-      </div>
-      <ThemeContextProvider>
-        <Box />
-      </ThemeContextProvider>
-      <UserContextProvider>
-        <User />
-      </UserContextProvider>
-      <Counter />
-  </div>
-  
-}
-export default App
+      
+            <div style={{marginTop: '20px'}}>
+              <h2>Counter with useReducer</h2>
+              <Counter />
+            </div>
+            <ThemeContextProvider>
+              <Box />
+            </ThemeContextProvider>
+            <UserContextProvider>
+              <User />
+            </UserContextProvider>
+            {/* <Counter message = 'The count value is {count}'/> */}
+            <Private isLoggedIn={true} component= {Profile}/>
+        </div>
+      
+      }
+      export default App
+      
 
