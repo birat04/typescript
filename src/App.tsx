@@ -64,36 +64,36 @@ import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
 function App () {
-    return <div className="App">
-      <Button handleClick={(event,id) =>{
-          console.log('Button Clicked', event,id)
-        }}/>
-        <Input value={'Birat'} handleChange={(event) =>{
-            console.log('Input Changed', event)
-          }}/>
-          <Container styles={{border:'1px solid red',padding:'10px'}}/>
+  return <div className="App">
+    <Button handleClick={(event,id) =>{
+        console.log('Button Clicked', event,id)
+      }}/>
+      <Input value={'Birat'} handleChange={(event) =>{
+          console.log('Input Changed', event)
+      }}/>
+        <Container styles={{border:'1px solid red',padding:'10px'}}/>
       
       
-            <div style={{marginTop: '20px'}}>
-              <h2>Counter with useReducer</h2>
-              <Counter />
-            </div>
-            <ThemeContextProvider>
-              <Box />
-            </ThemeContextProvider>
-            <UserContextProvider>
-              <User />
-            </UserContextProvider>
-            {/* <Counter message = 'The count value is {count}'/> */}
-            <Private isLoggedIn={true} component= {Profile}/>
-            <List
-              items = {['Birat','Web','Developer']}
-              onClick = {(item) => alert(item)}
-            />
+          <div style={{marginTop: '20px'}}>
+            <h2>Counter with useReducer</h2>
+            <Counter />
+          </div>
+          <ThemeContextProvider>
+            <Box />
+          </ThemeContextProvider>
+          <UserContextProvider>
+            <User />
+          </UserContextProvider>
+          {/* <Counter message = 'The count value is {count}'/> */}
+          <Private isLoggedIn={true} component= {Profile}/>
+          <List
+            items = {['Birat','Web','Developer']}
+            onClick = {(item) => alert(item)}
+          />
            
-        </div>
+  </div>
       
-      }
-      export default App
+}
+export default App
       
 
