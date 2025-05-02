@@ -62,6 +62,7 @@ import { UserContextProvider } from './components/context/UserContext'
 import { User} from './components/context/User'
 import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
+import { List } from './components/generics/List'
 function App () {
     return <div className="App">
       <Button handleClick={(event,id) =>{
@@ -85,6 +86,11 @@ function App () {
             </UserContextProvider>
             {/* <Counter message = 'The count value is {count}'/> */}
             <Private isLoggedIn={true} component= {Profile}/>
+            <List
+              items = {['Birat','Web','Developer']}
+              onClick = {(item) => alert(item)}
+            />
+           
         </div>
       
       }
