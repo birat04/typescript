@@ -63,6 +63,7 @@ import { User} from './components/context/User'
 import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
+import { RandomNumber } from './components/restriction/RandomNumber'
 function App () {
   return <div className="App">
     <Button handleClick={(event,id) =>{
@@ -90,6 +91,7 @@ function App () {
             items = {['Birat','Web','Developer']}
             onClick = {(item) => alert(item)}
           />
+          <RandomNumber value = {10} isPositive isNegative={false} isZero={false}/>
            
   </div>
       
