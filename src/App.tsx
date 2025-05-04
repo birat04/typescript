@@ -64,6 +64,7 @@ import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
 import { RandomNumber } from './components/restriction/RandomNumber'
+import { Toast } from './components/templateliterals/Toast'
 function App () {
   return <div className="App">
     <Button handleClick={(event,id) =>{
@@ -92,6 +93,9 @@ function App () {
             onClick = {(item) => alert(item)}
           />
           <RandomNumber value = {10} isZero/>
+          
+          <Toast position = 'top-right'/>
+          
            
   </div>
       
