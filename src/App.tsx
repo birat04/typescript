@@ -91,7 +91,7 @@ function App () {
             items = {['Birat','Web','Developer']}
             onClick = {(item) => alert(item)}
           />
-          <RandomNumber value = {10} isPositive isNegative={false} isZero={false}/>
+          <RandomNumber value = {10} isZero/>
            
   </div>
       
