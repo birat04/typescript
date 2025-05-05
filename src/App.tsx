@@ -66,6 +66,7 @@ import { List } from './components/generics/List'
 import { RandomNumber } from './components/restriction/RandomNumber'
 import { Toast } from './components/templateliterals/Toast'
 import { CustomButton } from './components/html/Button'
+import { Text } from './components/Polymorphic/Text'
 function App () {
   return <div className="App">
     <Button handleClick={(event,id) =>{
@@ -99,6 +100,9 @@ function App () {
           <CustomButton variant='primary' onClick = {() => console.log('Primary Button Clicked')}>
             Primary Button
           </CustomButton>
+          <Text as='h1'size = 'small' color = 'primary'>This is a small primary text</Text>
+          <Text as='p'size = 'medium' color = 'secondary'>This is a medium secondary text</Text>
+          <Text as='label' htmlFor='some-id'size = 'large' color = 'tertiary'>This is a large tertiary text</Text>
           
            
   </div>
