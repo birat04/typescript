@@ -65,6 +65,7 @@ import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
 import { RandomNumber } from './components/restriction/RandomNumber'
 import { Toast } from './components/templateliterals/Toast'
+import { CustomButton } from './components/html/Button'
 function App () {
   return <div className="App">
     <Button handleClick={(event,id) =>{
@@ -95,6 +96,9 @@ function App () {
           <RandomNumber value = {10} isZero/>
           
           <Toast position = 'top-right'/>
+          <CustomButton variant='primary' onClick = {() => console.log('Primary Button Clicked')}>
+            Primary Button
+          </CustomButton>
           
            
   </div>
